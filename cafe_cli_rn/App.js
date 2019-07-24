@@ -2,6 +2,8 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
+ * @author Jesus Daniel Neira Lara
+ * 
  * @format
  * @flow
  */
@@ -10,6 +12,8 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Image, Text, View} from 'react-native';
 import Styles from './app/styles/styles'
 import Colors from './app/styles/colors'
+
+import Router from './app/routes/router'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,9 +25,7 @@ const instructions = Platform.select({
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Image style={[Styles.image_big]} source={require('./app/src/images/logo.png')} />
-      </View>
+      <Router/>
     );
   }
 }

@@ -1,13 +1,28 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
+
+// Estilos....
+import Styles from '../styles/styles'
+import Colors from '../styles/colors'
 
 // create a component
 class MyClass extends Component {
+
+    static navigationOptions = {
+        header: null
+    }
+
+    componentDidMount = () => {
+        setTimeout(() => {
+            this.props.navigation.push('Signin')
+        },1000)
+    }
+
     render() {
         return (
-            <View style={styles.container}>
-                <Text>MyClass</Text>
+            <View style={[Styles.container_full, {backgroundColor: Colors.primary.default}]}>
+                <Image style={[Styles.image_big]} source={(require('../src/images/logo.png'))} />
             </View>
         );
     }
@@ -19,7 +34,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: Colors.primary.default,
     },
 });
 
