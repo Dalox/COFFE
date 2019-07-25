@@ -21,12 +21,26 @@ class MyClass extends Component {
 
     render() {
         return (
-            <View style={Styles.container}>
-                <Text style={[Styles.txt]}>Usuario</Text>
-                <TextInput placeholder={'Usuario'}/>
-                <Text style={[Styles.txt]}>Contrañesa</Text>
-                <TextInput placeholder={'Contraseña'}/>
-                <Checker value={this.state.check} onPress={(value) => this.setState({check: value})} txt={'Recordar cuenta'}/>
+            <View style={[Styles.container, {justifyContent: 'space-around', flex: 1}]}>
+                <View style={[{flex: 3}]}>
+                    <View style={[Styles.columns,{borderBottomColor: Colors.primary.default, borderBottomWidth: 2}]}>
+                        <Image style={[Styles.icon_primary]} source={require('../src/icons/1x/baseline_account_box_black_48dp.png')} />
+                        <TextInput style={[Styles.icon_input]} placeholder={'Usuario'}/>
+                    </View>
+                    <View style={[Styles.columns,{borderBottomColor: Colors.primary.default, borderBottomWidth: 2}]}>
+                        <Image style={[Styles.icon_primary]} source={require('../src/icons/1x/baseline_lock_black_48dp.png')} />
+                        <TextInput style={[Styles.icon_input]} placeholder={'Contraseña'}/>
+                    </View>
+                    <Checker value={this.state.check} onPress={(value) => this.setState({check: value})} txt={'Recordar cuenta'}/>
+                </View>
+                <View style={[{flex: 1}]}>
+                    <TouchableOpacity style={[Styles.btn]}>
+                        <Text style={[Styles.txt, Styles.txt_white]}>INICIAR SESION</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[Styles.btn_border]} onPress={() => this.props.navigation.push('Signup')}>
+                        <Text style={[Styles.txt, Styles.txt_primary]}>RESGISTRARSE</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }

@@ -8,8 +8,11 @@ import {createAppContainer, createSwitchNavigator, createStackNavigator} from 'r
 import Styles from '../styles/styles'
 import Colors from '../styles/colors'
 
+// Rutas
+
 import Splash from '../screen/splash'
 import Signin from '../screen/signin'
+import Signup from '../screen/signup'
 
 /**
  * Elementos....
@@ -17,8 +20,10 @@ import Signin from '../screen/signin'
 
 const MainStrack = createStackNavigator({
     Splash: {screen: Splash},
-    Signin: {screen: Signin}
+    Signin: {screen: Signin},
+    Signup: {screen: Signup}
 },{
+    initialRouteName: 'Splash',
     defaultNavigationOptions: {
         title: 'COFFE',
         headerStyle: {
@@ -30,27 +35,6 @@ const MainStrack = createStackNavigator({
         headerTintColor: '#FFFFFF',
     }
 })
-
-// create a component
-class MyClass extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>MyClass</Text>
-            </View>
-        );
-    }
-}
-
-// define your styles
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
-    },
-});
 
 //make this component available to the app
 export default createAppContainer(MainStrack);

@@ -191,5 +191,12 @@ export default StyleSheet.create({
     },
     search_input: {
         flex: 3,
+    },
+    input: {
+        borderBottomColor: Colors.primary.default,
+        borderBottomWidth: 2,
+        paddingHorizontal: 5,
+        paddingVertical: 10,
+        marginBottom: 5
     }
 });

@@ -19,7 +19,7 @@ export default class Checker extends Component {
     render() {
         let value = this.props.value
         return(
-            <View style={[Styles.columns,{alignItems: "center"}]}>
+            <View style={[Styles.columns,{alignItems: "center", marginTop: 10}]}>
                 <TouchableOpacity style={[Styles.icon]} onPress={() => this._onChangeValue(value)}>
                     <Image style={[Styles.icon_primary]} source={value ? require('../src/icons/1x/baseline_check_box_black_48dp.png') : require('../src/icons/1x/baseline_check_box_outline_blank_black_48dp.png')} />
                 </TouchableOpacity>
