@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 
 // Estilos....
-import Styles from '../styles/styles'
-import Colors from '../styles/colors'
+import Styles from '../constants/styles'
+import Colors from '../constants/colors'
 
 class MyListItem extends React.PureComponent {
     _onPress = () => {

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
 // Estilos....
-import Styles from '../styles/styles'
-import Colors from '../styles/colors'
+import Styles from '../constants/styles'
+import Colors from '../constants/colors'
 
 // create a component
 class MyClass extends Component {

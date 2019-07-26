@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 
 // Estilos....
-import Styles from '../styles/styles'
-import Colors from '../styles/colors'
+import Styles from '../constants/styles'
+import Colors from '../constants/colors'
 
 export default class Checker extends Component {
 

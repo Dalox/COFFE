@@ -10,8 +10,6 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Image, Text, View} from 'react-native';
-import Styles from './app/styles/styles'
-import Colors from './app/styles/colors'
 
 import Router from './app/routes/router'
 
