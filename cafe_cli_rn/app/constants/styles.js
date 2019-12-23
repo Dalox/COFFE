@@ -100,6 +100,14 @@ export default StyleSheet.create({
         borderRadius: 5,
         margin: 5
     },
+    btn_full: {
+        justifyContent: 'center',
+        alignContent: 'center',
+        alignItems: 'center',
+        backgroundColor: Colors.primary.default,
+        paddingVertical: 15,
+        paddingHorizontal: 30,
+    },
     title: {
         fontSize: 20,
         fontWeight: 'bold',
@@ -198,5 +206,17 @@ export default StyleSheet.create({
         paddingHorizontal: 5,
         paddingVertical: 10,
         marginBottom: 5
+    },
+    listitem: {
+      borderBottomColor: '#ddd',
+      borderBottomWidth: 2,
+      paddingVertical: 12,
+    },
+    info_item: {
+        flex: 0,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        borderBottomColor: '#ccc',
+        borderBottomWidth: 1
     }
 });

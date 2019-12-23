@@ -8,9 +8,6 @@ import Colors from '../constants/colors'
 export default class Home extends Component {
 
     static navigationOptions = {
-        /*headerLeft: (
-            <Image style={[Styles.icon, {tintColor: '#fff', marginLeft: 15}]} source={require('../src/icons/1x/Menu.png')} />
-        )*/
     }
 
   constructor(props) {
@@ -21,8 +18,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <View>
-        <Text> main </Text>
+      <View style={[Styles.container]}>
+        <Text style={[Styles.txt, Styles.txt_primary, Styles.subtitle]}>Ofertas</Text>
+        <Text style={[Styles.txt, Styles.txt_primary, Styles.subtitle]}>Noticias</Text>
       </View>
     );
   }

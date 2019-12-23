@@ -30,6 +30,7 @@ import drawerContent from '../components/drawerContent'
 const HomeDrawer = createDrawerNavigator({
     Main: {screen: Home, 
         navigationOptions: {
+            drawerLabel: 'Inicio',
             drawerIcon: ({ tintColor }) => (
                 <Image
                     source={require("../src/icons/1x/baseline_home_black_48dp.png")}
@@ -39,6 +40,7 @@ const HomeDrawer = createDrawerNavigator({
             )}},
     Stores: {screen: Stores, 
         navigationOptions: {
+            drawerLabel: 'Tiendas',
             drawerIcon: ({ tintColor }) => (
                 <Image
                     source={require("../src/icons/1x/baseline_location_on_black_48dp.png")}
@@ -48,6 +50,7 @@ const HomeDrawer = createDrawerNavigator({
             )}},
     Menu: {screen: Menu, 
         navigationOptions: {
+            drawerLabel: 'Menu',
             drawerIcon: ({ tintColor }) => (
                 <Image
                     source={require("../src/icons/1x/baseline_local_cafe_black_48dp.png")}
@@ -57,6 +60,7 @@ const HomeDrawer = createDrawerNavigator({
             )}},
     About: {screen: About, 
         navigationOptions: {
+            drawerLabel: 'Acerca',
             drawerIcon: ({ tintColor }) => (
                 <Image
                     source={require("../src/icons/1x/baseline_info_black_48dp.png")}
@@ -66,6 +70,7 @@ const HomeDrawer = createDrawerNavigator({
             )}},
     Account: {screen: Account, 
         navigationOptions: {
+            drawerLabel: 'Usuario',
             drawerIcon: ({ tintColor }) => (
                 <Image
                     source={require("../src/icons/1x/baseline_account_circle_black_48dp.png")}

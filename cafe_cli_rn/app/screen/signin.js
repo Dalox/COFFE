@@ -18,36 +18,28 @@ class MyClass extends Component {
 
     state = {
         //check: false,
-        email: 'jdnl95@gmail.com',
+        id: '1144084979',
         password: '12345'
     }
 
     _signin = async() => {
         let user = null
-        await fetch('http://192.168.1.72:3000/users/signin',{
+        await fetch('http://us-central1-cafe-82cb4.cloudfunctions.net/SignInUser',{
             method: 'POST',
             headers: {
               Accept: 'application/json',
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                email: this.state.email,
+                id: this.state.id,
                 password: this.state.password,
             })
         }).then((response) => response.json()).then((resJSON) => {
             //console.warn(typeof resJSON)
-            if(resJSON.status == 'password') {
+            if(resJSON.status == false) {
                 Alert.alert(
                     'ERROR',
-                    'Contraseña incorrecta',
-                    [
-                        {text: 'OK', style:'cancel'}
-                    ]
-                )
-            } else if(resJSON.status == 'error') {
-                Alert.alert(
-                    'ERROR',
-                    'Problema de servidor',
+                    'Información incorrecta',
                     [
                         {text: 'OK', style:'cancel'}
                     ]
@@ -79,7 +71,7 @@ class MyClass extends Component {
                 <View style={[{flex: 3}]}>
                     <View style={[Styles.columns,{borderBottomColor: Colors.primary.default, borderBottomWidth: 2}]}>
                         <Image style={[Styles.icon_light]} source={require('../src/icons/1x/baseline_account_box_black_48dp.png')} />
-                        <TextInput value={this.state.email} onValueChange={(value) => this.setState({email: value})} style={[Styles.icon_input]} placeholder={'Usuario'}/>
+                        <TextInput value={this.state.id} maxLength={10} keyboardType={'number-pad'} onChangeText = {((text) => this.setState({id: text}))} style={[Styles.input]} placeholder={'Documento'} />
                     </View>
                     <View style={[Styles.columns,{borderBottomColor: Colors.primary.default, borderBottomWidth: 2}]}>
                         <Image style={[Styles.icon_light]} source={require('../src/icons/1x/baseline_lock_black_48dp.png')} />
